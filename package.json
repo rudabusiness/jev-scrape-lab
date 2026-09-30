@@ -1,0 +1,19 @@
+{
+  "name": "jev-scrape-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.mjs",
+    "start": "node server.mjs",
+    "install:browser": "playwright install chromium",
+    "check": "node --check server.mjs && node --check lib/scraper.mjs && node --check lib/classify.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@typesafe-ai/sdk": "^0.6.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "playwright": "^1.51.0"
+  }
+}
